@@ -1,3 +1,4 @@
+import { VersioningType } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 
@@ -6,6 +7,10 @@ import { ConfigType } from './config/validate-config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  app.enableVersioning({
+    type: VersioningType.URI,
+  });
 
   const config: ConfigService<ConfigType> =
     app.get<ConfigService<ConfigType>>(ConfigService);
