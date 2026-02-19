@@ -1,6 +1,6 @@
 import { ConfigModuleOptions } from '@nestjs/config';
 
-import { ENV_FILE_PATH } from '../../shared/constants';
+import { ENV_FILE_PATH } from '../constants';
 
 import { validateConfig } from './validate-config';
 

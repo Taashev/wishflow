@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
 import { DataSource } from 'typeorm';
 
-import { ENV_FILE_PATH } from '../../shared/constants';
 import { validateConfig } from '../config/validate-config';
+import { ENV_FILE_PATH } from '../constants';
 
 import { loadDataSourceOptions } from './load-options.typeorm';
 
