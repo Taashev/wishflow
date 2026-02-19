@@ -11,6 +11,8 @@ const configSchema = z.object({
   POSTGRES_DB: z.string(),
   POSTGRES_USER: z.string(),
   POSTGRES_PASSWORD: z.string(),
+
+  HASH_PASSWORD_SALT: z.coerce.number(),
 });
 
 export type ConfigType = z.infer<typeof configSchema>;
